@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'cars.apps.CarsConfig',
     'accounts.apps.AccountsConfig',
+    'contacts.apps.ContactsConfig',
     'ckeditor',
     'django.contrib.sites',
     'allauth',
@@ -49,7 +50,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # Provider
     'allauth.socialaccount.providers.facebook',
-    'allauth.socialaccount.providers.google'
+    'allauth.socialaccount.providers.google',
+
 ]
 
 MIDDLEWARE = [
@@ -145,3 +147,10 @@ MESSAGE_TAGS = {
 }
 
 SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'huan06949@gmail.com'
+EMAIL_HOST_PASSWORD = 'ilosqisizubupyiz'
+EMAIL_USE_TLS = True
