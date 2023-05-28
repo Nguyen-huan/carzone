@@ -38,7 +38,6 @@ def search(request):
     year_search = Car.objects.values_list('year', flat=True).distinct()
     body_style_search = Car.objects.values_list('body_style', flat=True).distinct()
     transmission_search = Car.objects.values_list('transmission', flat=True).distinct()
-    print(type(transmission_search))
 
     if 'keyword' in request.GET:
         keyword = request.GET.get("keyword")
